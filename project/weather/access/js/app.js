@@ -16,7 +16,7 @@ const windStatus = $('.wind-status');
 const getMyLocation = $('.icon-location')
 const nameLocation =$('.name-location');
 
-const not404 = './acssets/data/image/404.png'
+const not404 = '/project/weather/access/data/img/404.png'
 
 
 const KEYAPI = '2ba9936d92110510780f56a78d942a44';
@@ -97,39 +97,39 @@ const app ={
         function setBg(hours){
             if(hours.session ==="night"){
                 if(apiWeather.weather[0].main === "Clear"){
-                    imgWeather.src = '../data/img/nightclear.png'
+                    imgWeather.src = '/project/weather/access/data/img/nightclear.png'
                 }
                 else if(apiWeather.weather[0].main === "Clouds"){
-                    imgWeather.src = '../data/img/nightclouds.png'
+                    imgWeather.src = '/project/weather/access/data/img/nightclouds.png'
                 }
                 else if(apiWeather.weather[0].main === "Haze"){
-                    imgWeather.src = '../data/img/nighthaze.png'
+                    imgWeather.src = '/project/weather/access/data/img/nighthaze.png'
                 }
                 else if(apiWeather.weather[0].main === "Rain"){
-                    imgWeather.src = '../data/img/nightrain.png'
+                    imgWeather.src = '/project/weather/access/data/img/nightrain.png'
                 }
                 else{
-                    imgWeather.src = '../data/img/nightsnow.png'
+                    imgWeather.src = '/project/weather/access/data/img/nightsnow.png'
                 }
             }
             else{
                 if(apiWeather.weather[0].main === "Clear"){
-                    imgWeather.src = '../data/img/clear.png'
+                    imgWeather.src = '/project/weather/access/data/img/clear.png'
                 }
                 else if(apiWeather.weather[0].main === "Clouds"){
-                    imgWeather.src = '../data/img/clouds.png'
+                    imgWeather.src = '/project/weather/access/data/img/clouds.png'
                 }
                 else if(apiWeather.weather[0].main === "Haze"){
-                    imgWeather.src = '../data/img/haze.png'
+                    imgWeather.src = '/project/weather/access/data/img/haze.png'
                 }
                 else if(apiWeather.weather[0].main === "Rain"){
-                    imgWeather.src = '../data/img/rain.png'
+                    imgWeather.src = '/project/weather/access/data/img/rain.png'
                 }
                 else{
-                    imgWeather.src = '../data/img/snow.png'
+                    imgWeather.src = '/project/weather/access/data/img/snow.png'
                 }
             }
-            container.style.backgroundImage = `url('../data/bg/${hours.session}.jpg')`
+            container.style.backgroundImage = `url('/project/weather/access/data/bg/${hours.session}.jpg')`
             container.style.color = hours.textColor
         }
         setBg(this.generalFunction.handleTimes(apiWeather))
