@@ -97,39 +97,39 @@ const app ={
         function setBg(hours){
             if(hours.session ==="night"){
                 if(apiWeather.weather[0].main === "Clear"){
-                    imgWeather.src = '/project/weather/access/data/img/nightclear.png'
+                    imgWeather.src = "/project/weather/access/data/img/nightclear.png"
                 }
                 else if(apiWeather.weather[0].main === "Clouds"){
-                    imgWeather.src = '/project/weather/access/data/img/nightclouds.png'
+                    imgWeather.src = "/project/weather/access/data/img/nightclouds.png"
                 }
                 else if(apiWeather.weather[0].main === "Haze"){
-                    imgWeather.src = '/project/weather/access/data/img/nighthaze.png'
+                    imgWeather.src = "/project/weather/access/data/img/nighthaze.png"
                 }
                 else if(apiWeather.weather[0].main === "Rain"){
-                    imgWeather.src = '/project/weather/access/data/img/nightrain.png'
+                    imgWeather.src = "/project/weather/access/data/img/nightrain.png"
                 }
                 else{
-                    imgWeather.src = '/project/weather/access/data/img/nightsnow.png'
+                    imgWeather.src = "/project/weather/access/data/img/nightsnow.png"
                 }
             }
             else{
                 if(apiWeather.weather[0].main === "Clear"){
-                    imgWeather.src = '/project/weather/access/data/img/clear.png'
+                    imgWeather.src = "/project/weather/access/data/img/clear.png"
                 }
                 else if(apiWeather.weather[0].main === "Clouds"){
-                    imgWeather.src = '/project/weather/access/data/img/clouds.png'
+                    imgWeather.src = "/project/weather/access/data/img/clouds.png"
                 }
                 else if(apiWeather.weather[0].main === "Haze"){
-                    imgWeather.src = '/project/weather/access/data/img/haze.png'
+                    imgWeather.src = "/project/weather/access/data/img/haze.png"
                 }
                 else if(apiWeather.weather[0].main === "Rain"){
-                    imgWeather.src = '/project/weather/access/data/img/rain.png'
+                    imgWeather.src = "/project/weather/access/data/img/rain.png"
                 }
                 else{
-                    imgWeather.src = '/project/weather/access/data/img/snow.png'
+                    imgWeather.src = "/project/weather/access/data/img/snow.png"
                 }
             }
-            container.style.backgroundImage = `url('/project/weather/access/data/bg/${hours.session}.jpg')`
+            container.style.backgroundImage = `url("/project/weather/access /data/bg/${hours.session}.jpg")`
             container.style.color = hours.textColor
         }
         setBg(this.generalFunction.handleTimes(apiWeather))
